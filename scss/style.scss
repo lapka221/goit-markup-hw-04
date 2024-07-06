@@ -1,0 +1,255 @@
+$white: #fff;
+$navyblue: #2e2f42;
+$cornflower: #e7e9fc;
+$iris: #4d5ae5;
+$slate: #434455;
+$cloud: #f4f4fd;
+$ocean: #404bbf;
+$lightslate: #8e8f99;
+$grey: rgba(46, 47, 66, 0.7);
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+body {
+  font-size: 1rem;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  color: $slate;
+  background-color: $white;
+}
+.container {
+  width: 1130px;
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+h1 {
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 3.5rem;
+  color: $white;
+}
+// header
+
+.header {
+  padding-top: 24px;
+  padding-bottom: 24px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 76px;
+  }
+  .logo {
+    color: $navyblue;
+    font-weight: 700;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.125rem;
+    text-transform: uppercase;
+  }
+  .web {
+    color: $iris;
+  }
+
+  .menu-list,
+  .contact-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    a {
+      font-weight: 500;
+      color: $navyblue;
+    }
+    .menu-link:hover,
+    .contact-link:hover {
+      color: $ocean;
+    }
+  }
+
+  .menu-link::after,
+  .contact-link::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 5px;
+    border-radius: 40px;
+    transform-origin: center;
+    transform: scaleX(0);
+    background: $ocean;
+    transition: 0.3s;
+  }
+
+  .menu-link:hover::after,
+  .contact-link:hover::after {
+    transform: scaleX(1);
+  }
+
+  .contact-item {
+    .contact-link {
+      color: $slate;
+    }
+  }
+}
+
+// main
+
+.hero {
+  text-align: center;
+  padding: 188px;
+  background: linear-gradient(to right, $grey, $grey),
+    url(../img/hero-bg.jpg) center / cover no-repeat;
+  background-color: $grey;
+  .btn {
+    margin-top: 48px;
+    border-radius: 4px;
+    padding: 16px 32px;
+    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+    background: $iris;
+    border: 0;
+    font-weight: 500;
+    color: $white;
+    cursor: pointer;
+  }
+}
+
+.tech {
+  margin-top: 94px;
+  margin-bottom: 120px;
+  .tech-list {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+    li {
+      color: $slate;
+      letter-spacing: 0.02em;
+    }
+    .tech-img {
+      padding: 24px 100px;
+      background: $cloud;
+      border: 1px solid $lightslate;
+      border-radius: 4px;
+    }
+  }
+}
+
+.team {
+  padding: 120px 156px;
+  background: $cloud;
+  h2 {
+    font-size: 2.25rem;
+    font-weight: 700;
+    text-transform: capitalize;
+    text-align: center;
+    margin-bottom: 72px;
+  }
+  .team-list {
+    display: flex;
+    justify-content: space-between;
+  }
+  .team-item {
+    background: $white;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0 2px 1px 0 rgba(46, 47, 66, 0.08),
+      0 1px 1px 0 rgba(46, 47, 66, 0.16), 0 1px 6px 0 rgba(46, 47, 66, 0.08);
+  }
+  .team-text {
+    padding: 32px 49px;
+    text-align: center;
+    h3 {
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: $navyblue;
+    }
+    p {
+      color: $slate;
+      margin-top: 8px;
+    }
+  }
+  .team-contact {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 24px;
+  }
+}
+
+.portfolio {
+  margin-top: 120px;
+  margin-bottom: 120px;
+  h2 {
+    text-align: center;
+    margin-bottom: 72px;
+  }
+  .portfolio-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .portfolio-item {
+    margin-right: 15px;
+    margin-bottom: 48px;
+    div {
+      padding: 32px 16px;
+      border-bottom: 1px solid $cornflower;
+      border-left: 1px solid $cornflower;
+      border-right: 1px solid $cornflower;
+    }
+    h3 {
+      font-weight: 500;
+      font-size: 1.25rem;
+      color: $navyblue;
+    }
+    p {
+      color: $slate;
+    }
+  }
+}
+
+// footer
+.footer {
+  background: $navyblue;
+  padding: 100px;
+  .logo {
+    color: $cloud;
+    font-weight: 700;
+    font-family: "Raleway", sans-serif;
+    font-size: 1.125rem;
+  }
+  .web {
+    color: $iris;
+  }
+  p {
+    margin-top: 16px;
+    color: $cloud;
+  }
+}
